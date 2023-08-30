@@ -45,4 +45,4 @@ const ProductSlider = ({ category }) => {
   )
 }
 
-export default ProductSlider;
+export default React.memo(ProductSlider); //aynı datalar ile render var ise tekrar render etmeden öncekini getirir.cashing.
