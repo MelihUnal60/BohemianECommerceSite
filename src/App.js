@@ -4,11 +4,13 @@ import About from '../src/Pages/About/About';
 import Cart from '../src/Pages/Cart/Cart';
 import WishList from '../src/Pages/WishList/WishList';
 import Error from '../src/Pages/Error/Error';
-import ProductDetail from './Pages/ProductDetail/ProductDetail';
+import ProductDetail from './Components/ProductDetail/ProductDetail';
 import Naav from './Components/Nav/Naav';
 import Contact from './Pages/Contact/Contact';
 import './App.scss';
 import  Footer  from './Components/Footer/Footer';
+import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer } from 'react-toastify';
 
 function App() {
   return (
@@ -27,6 +29,9 @@ function App() {
             </Routes>
           </div>
         <Footer />
+        <ToastContainer position='top-right'>
+
+        </ToastContainer>
       </div>
     </div>
   );
