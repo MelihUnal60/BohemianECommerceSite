@@ -32,7 +32,7 @@ const Slider = () => {
                 sliderItems.map((item) => {
                     return(
                         <CarouselItem key={item.id} className={styles.sliderItem}>
-
+                            <img className='d-block w-100' src={item.img} alt='bohem tabaklar' />
                         </CarouselItem>
                     )
                 })
