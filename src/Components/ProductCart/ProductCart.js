@@ -13,9 +13,9 @@ const ProductCart = ({product}) => {
 
   const addProduct = () => {
     //Sepete ürün ekleme operasyonu
-    toast.success(`${product?.productTitle.slice(0,20)} sepete eklendi`,{
-      autoClose: 2000
-    });
+    // toast.success(`${product?.productTitle.slice(0,20)} sepete eklendi`,{
+    //   autoClose: 2000
+    // });
   }
 
   return (

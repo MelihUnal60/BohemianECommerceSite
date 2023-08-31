@@ -2,7 +2,7 @@ import React from 'react';
 import img1 from '../../assets/img1.webp';
 import img2 from '../../assets/img2.webp';
 import img3 from '../../assets/img3.webp';
-import { Carousel, CarouselItem } from 'react-bootstrap';
+import { Button, Carousel, CarouselItem } from 'react-bootstrap';
 import styles from './Slider.module.scss';
 
 const Slider = () => {
@@ -33,6 +33,19 @@ const Slider = () => {
                     return(
                         <CarouselItem key={item.id} className={styles.sliderItem}>
                             <img className='d-block w-100' src={item.img} alt='bohem tabaklar' />
+                            <Carousel.Caption>
+                                <h1 style={{ color: 'aliceblue', fontSize: '48px'}}>
+                                    {item.caption}
+                                </h1>
+                                <p>
+                                    Tüm Slaytlar için ortak alan
+                                </p>
+                                <Button className={styles.sliderBtn}>
+                                    <a href='#product-list'>
+                                            Daha Fazla İçerik
+                                    </a>
+                                </Button>
+                            </Carousel.Caption>
                         </CarouselItem>
                     )
                 })
