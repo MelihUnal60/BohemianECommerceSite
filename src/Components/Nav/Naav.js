@@ -3,8 +3,12 @@ import { Navbar, Container,Nav } from 'react-bootstrap';
 import { NavLink } from 'react-router-dom';
 import { AiOutlineShoppingCart } from 'react-icons/ai'; 
 import styles from './Navv.module.scss';
+import { useSelector } from 'react-redux';
 
 const  Naav = () => {
+
+    const { cart } = useSelector((state) => state.cart)
+
     const menus = [
         {
             name:'Ana Sayfa',
@@ -53,7 +57,7 @@ const  Naav = () => {
                         <NavLink className={`${styles.navLink} ${styles.cartIcon}`} to='/cart'>
                             <AiOutlineShoppingCart size={23} /> {' '}
                             <div className={styles.cartLength}>
-                                <h6>5</h6>
+                                <h6>{cart?.length}</h6>
                             </div>
                         </NavLink>
 
